@@ -66,27 +66,34 @@ void gambarGrafikAsterisk(std::string label, double x) {
 }
 int main()
 {
-    try
-    {
-        std::vector<int> input = userInput();
-        double avg = rata_rata(input);
-        std::cout << "Rata-rata: " << avg << std::endl;
+    char ulang;
+    do {
+        try
+        {
+            std::vector<int> input = userInput();
+            double avg = rata_rata(input);
+            std::cout << "Rata-rata: " << avg << std::endl;
 
-        int min, max;
-        findMinMax(input, min, max);
-        std::cout << "Nilai terendah: " << min << std::endl;
-        std::cout << "Nilai tertinggi: " << max << std::endl;
+            int min, max;
+            findMinMax(input, min, max);
+            std::cout << "Nilai terendah: " << min << std::endl;
+            std::cout << "Nilai tertinggi: " << max << std::endl;
 
-        std::cout << std::endl;
+            std::cout << std::endl;
 
-        gambarGrafikAsterisk("rata-rata", avg);
-        gambarGrafikAsterisk("nilai terendah", min);
-        gambarGrafikAsterisk("nilai tertinggi", max);
-    } catch (const std::exception& e)
-    {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return 1;
-    }
+            gambarGrafikAsterisk("rata-rata", avg);
+            gambarGrafikAsterisk("nilai terendah", min);
+            gambarGrafikAsterisk("nilai tertinggi", max);
+        } catch (const std::exception& e)
+        {
+            std::cerr << "Error: " << e.what() << std::endl;
+            return 1;
+        }
+
+        std::cout << "Ulangi? (y/n): ";
+        std::cin >> ulang;
+        std::cin.ignore(); // biar getline nggak skip
+    } while (ulang == 'y' || ulang == 'Y');
 
     return 0;
 }
