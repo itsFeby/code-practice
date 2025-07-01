@@ -6,6 +6,8 @@
 *.a
 *.so
 *.dll
+main
+
 
 # === Editor ===
 .vscode/
