@@ -31,8 +31,9 @@ int main(){
     std::cin.ignore();
     std::cout << "NIM: ";
     std::getline(std::cin, input.nim);
-
     kelas.push_back(input);
+
+    std::cout << "\n";
 
     std::cout << "Daftar Mahasiswa: \n\n";
     int no{1};
