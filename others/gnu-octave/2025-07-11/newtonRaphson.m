@@ -38,6 +38,3 @@ df = @(x) 2*x;           % Turunannya
 akar = newtonRaphson(f, df, 1.0, 1e-6);
 disp(["Akar: ", num2str(akar)]);
 
-function retval = newton-raphson (input1, input2)
-
-endfunction
