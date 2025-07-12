@@ -1,3 +1,5 @@
+% File ini untuk GNU Octave
+
 f = @(x) x^3 - x - 2;
 a = 1;
 b = 2;
