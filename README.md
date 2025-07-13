@@ -20,6 +20,7 @@ Sometimes the best way to learn is to forget, and then remember *with better und
 Primarily:
 - C++
 - GNU Octave
+- Matlab
 - Python
 - Bash (for scripts)
 - Markdown (for notes)
